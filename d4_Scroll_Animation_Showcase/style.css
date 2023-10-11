@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+/* scroll Transfor at line 139 very simple logic , we make translation on x axis +ve for even -ve for odd , using JS we add show class only at top(scroll posn) dynamicaly by adding show class one by one  so we saw a transition */
+
+
+body {
+    background-color: #333;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+
+/* bodycontainer Start */
+
+
+/* inside pages Start */
+.page1{
+    margin-top: 70px;
+   }
+   .page2{
+     margin-top: 70px;
+    }
+   .page3{
+     margin-top: 70px;
+    }
+   .page4{
+     margin-top: 70px;
+    }
+   .page5{
+     margin-top: 70px;
+    }
+   .page6{
+     margin-top: 70px;
+    }
+   .page7{
+     margin-top: 70px;
+    }
+/* inside pages End */
+  
+/* Container Start */
+  .container {
+    background-color: #af9797;
+    width: 100vw;
+    min-height: 80vh;
+    padding: 50px;
+  }
+/* Container End */
+
+
+/* Container Transform Start */
+.container.pagerotate {
+  background-color: #af9797;
+  
+    max-width: 800px;
+    /* max-height: 50vh; */
+    min-height: 50vh;
+    padding: 15px;
+    
+  }
+.bodycontainer
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Container Transform End */
+
+
+/* Content (inside container) Start */
+.content{
+    max-width: 1100px;
+    margin: 50px auto;
+    background-color: #af9797;
+    transform-origin: top left;
+  }
+  
+  .content img {
+    max-width: 75%;
+    margin-left: 10%;
+  }
+  .content h1{
+   margin: 0;
+  }
+  .content h3{
+  margin-left: 35%;
+  
+  }
+  .content small {
+    color: rgb(70, 70, 70);
+    font-style: italic;
+  }
+  
+  .content p {
+    color: rgb(29, 28, 28);
+    line-height: 1.5;
+  }
+/* Content (inside container) End */
+ 
+
+/* content Transform Start */
+  .contentpagerotate {
+    background-color: #ab5f5f;
+    /* max-height: 100vh; */
+    min-height: 50vh;
+    margin: 5px;
+    border: 20px solid #ab5f5f;
+    position: relative;
+  }
+  .contentpagerotate img{
+    max-width: 40%;
+    margin-left: 200px;
+    position: relative;
+  
+  }
+  .contentpagerotate h1{
+  font-size: 15px;
+  }
+  .contentpagerotate small{
+   font-size: 6px;
+  }
+  .contentpagerotate h3{
+    font-size: 10px;
+    /* margin-left: 325px; */
+  }
+  .contentpagerotate p{
+   font-size: 8px;
+   line-height: 1.5;
+  }
+/* content Transform End */
+
+
+/* scroll Transfor Start */
+
+.seeanimation{
+    display: none;
+}
+  
+  .box.showtransition {
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+  }
+  
+  .box.showtransition:nth-of-type(odd) {
+    transform: translateX(-400%);
+  }
+  
+  .box.showtransition.boxshow {
+    transform: translateX(0);
+  }
+  
+  .box.showtransition h2 {
+    font-size: 45px;
+  } 
+/* scroll Transfor End */
+  
+/* bodycontainer End */
+
+
+
+/* MenuIcon Start */
+.menuicon_container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    z-index: 999;
+  }
+  
+  .menuicon {
+    background-color: #574a4a;
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+  }
+  
+  .menuicon button {
+    cursor: pointer;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 24px;
+    color: #fff;
+  }
+  .menuicon button:focus {
+    outline: none;
+  }
+  
+  .menuicon button#open {
+    left: 65%;
+  }
+  
+  .menuicon button#close {
+    left: 65%;
+    transform: translate(-50px, -50px);
+  }
+  .menuicon.menutranslate button#close {
+    transform: translate(0px, 0px);
+    transition: transform 0.5s linear;
+  }
+  .menuicon.menutranslate button#open {
+    transform: translate(-50px, -50px);
+    transition: transform 0.5s linear;
+  }
+/* MenuIcon End */
+
+/* NavBar Start */ 
+  nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    /* z-index: 100; */
+  } 
+  nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+  }
+  nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #4cd45e;
+  }
+  nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 15px 0;
+    transform: translateX(-200%);
+    transition: transform 0.3s ease-in;
+  }
+  
+  nav ul li + li {
+    /* margin-left: 15px; */
+    transform: translateX(-300%);
+    transition: transform 0.3s ease-in;
+  }
+  
+  nav ul li + li + li {
+    /* margin-left: 30px; */
+    transform: translateX(-400%);
+  }
+  nav ul li + li + li +li {
+    /* margin-left: 45px; */
+    transform: translateX(-500%);
+  }
+  
+  nav a {
+    color: #fafafa;
+    text-decoration: none;
+    transition: all 0.5s;
+  }
+  
+  nav a:hover {
+    color: #4cd45e;
+    font-weight: bold;
+  } 
+  nav ul li i:hover {
+    color: #fafafa;
+  }
+  /* .navpage {
+    margin: 5px;
+  } */
+  
+  .navshow ul li {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in;
+  }
+  .navshow ul li + li {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in;
+  }
+  .navshow ul li + li + li {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in;
+  }
+  .navshow ul li + li + li +li {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in;
+  }
+  
+/* NavBar End */ 
