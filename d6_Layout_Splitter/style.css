@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+*{
+    box-sizing: border-box;    
+}
+
+:root{
+    --leftoverlay: rgba(128, 52, 39, 0.7);
+    --rightoverlay: rgba(13, 88, 3, 0.7);
+    --leftbtnbg: rgba(73, 30, 23, 0.7);
+    --rightbtnbg: rgba(8, 54, 2, 0.7);
+    --speed:1200ms;
+    --hoverwidth: 90vw;
+    --otherwidth: 10vw;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400vh;
+  /* overflow: hidden; */
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgb(46, 46, 46);
+}
+.split{
+    position: absolute;
+    overflow: hidden;
+    /* width: 50%;
+    height: 100%; */
+
+}
+.split.left::before{
+   content: '';
+   background-color: var(--leftoverlay);
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   
+
+}
+.split.left{
+    position: absolute;
+    top:0;
+    left: 0;
+    /* background: url('https://images.unsplash.com/photo-1505051508008-923feaf90180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80') no-repeat center center/cover; */
+    background: url('https://images.unsplash.com/photo-1500622944204-b135684e99fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2922&q=80') no-repeat center center/cover;
+    width: 10vw;
+    height: 100vh;
+    border-right: 2px solid var(--rightoverlay);
+
+}
+
+
+.split.right::before
+{   
+    content: '';
+    background-color: var(--rightoverlay);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+.split.right{
+    top: 0;
+    right: 0;
+    background: url('https://images.unsplash.com/photo-1500622944204-b135684e99fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2922&q=80') no-repeat center center/cover;
+    width: 90vw;
+    height: 100vh;
+
+}
+
+h1 {
+    position: absolute;
+    font-size: 4rem;
+    color: #fff;
+    left: 50%;
+    top: 20%;
+    white-space: nowrap; 
+  }
+.left h1{
+    transform: rotate(0);
+    transform: translateX(-50%);
+    transition: transform 0.5s linear;
+}
+.right h1{
+    transform: rotate(0);
+    transform: translateX(-50%);
+    transition: transform 0.5s linear;
+}
+
+.btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: rgb(248, 248, 248) solid 0.1rem;
+    font-size: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 5rem;
+    padding: 0.2rem;
+    border-radius: 2rem;
+}
+
+/* Transition or hover START*/
+.split.left .btn:hover{
+    background-color: var(--leftbtnbg);
+    border-color: var(--leftbtnbg);
+    border-width: 0.2rem;
+    border-radius: 2rem;
+    width: 9rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+.split.right .btn:hover{
+    background-color: var(--rightbtnbg);
+    border-color: var(--rightbtnbg);
+    border-width: 0.2rem;
+    border-radius: 2rem;
+    width: 9rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.contlefthover .left{
+    width: var(--hoverwidth);
+    
+}
+.contlefthover .right{
+    width: var(--otherwidth);
+}
+
+.contrighthover .right{
+    width: var(--hoverwidth);
+}
+.contrighthover .left{
+    width: var(--otherwidth);
+}
+
+.contlefthover .right .btn{
+    opacity: 0;
+}
+.contrighthover .left .btn{
+    opacity: 0;
+}
+.contrighthover .left h1{
+    transform: rotate(-90deg);
+    left: -10%;
+    top: 35%;
+    transition: transform 1.1s linear;
+}
+.contlefthover .right h1{
+    transform: rotate(-90deg);
+    left: -10%;
+    top: 35%;
+    transition: transform 1.1s linear;
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+  transition: all var(--speed) ease-in-out;
+}
+
+/* Transition or hover END*/
+
+@media (max-width: 800px) {
+    h1 {
+      font-size: 2rem;
+      top: 30%;
+    }
+  
+    .btn {
+      padding: 1.2rem;
+      width: 12rem;
+    }
+  }
