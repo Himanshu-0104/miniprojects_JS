@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+
+.bimage{
+    background: url('https://images.unsplash.com/photo-1696164255885-4bb2db6bb3f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100vw + 100px);
+    height: calc(100vh + 100px);
+    z-index: -1;
+    filter: blur(100px);
+
+}
+.loading::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: inherit; */
+    background: khaki;
+    border-radius: 50px;
+    filter: blur(30px);
+    z-index: -1;
+    margin-left: -10px;
+
+}
+.loading{
+   font-size: 50px;
+   color: goldenrod;
+   position: relative;
+   padding: 10px;
+   
+   
+}
