@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  overflow-x: hidden;
+  height: 110vh;
+  background: black;
+  
+}
+
+
+
+/*Navbar Start*/
+nav {
+  position: relative;
+  top: 10px;
+  left: -30%;
+  background-color: white;
+  padding: 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;/*Imp*/
+  align-items: center;/*Imp*/
+  justify-content: center;/*Imp*/
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.705);
+  overflow-x: hidden; /*Imp*/
+  transition: width 0.6s linear;
+}
+nav.active {
+  width: 400px; 
+  border-radius: 0px;
+}
+
+ 
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    width: 0;
+    transition: width 0.6s linear;
+    transform: translateY(12px);/*Imp*/
+    
+  }
+  nav.active ul {
+    display: flex;
+    width: 100%;
+  }
+
+  
+nav ul li {
+  transform: rotateY(0deg);
+  opacity: 0;
+  transition: transform 0.6s linear, opacity 0.6s linear;
+  position: relative;
+  margin-right: 15px;
+  
+}
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+
+
+  nav ul a {
+    position: relative;
+    margin: 0 10px;
+    color: gray;
+    text-decoration: none;
+  }
+  a:hover{
+      color: black;
+  }
+
+
+/*change color onhover Start*/
+  nav.active .lihover{
+    position: absolute;
+    background-color: gray;
+    border-radius: 5px;
+    height: 2px;
+    left: -1px;
+    top: -10px;
+  }
+  nav.active a:hover .lihover{
+    height: 4px;
+    border-radius: 0px;
+    background: black;
+  }
+/*change color onhover End*/
+  
+
+/*change color onclick Start*/
+  .currentpageA{
+    color: black;
+  }
+  nav.active .currentpage{
+    position: absolute;
+    left: -1px;
+    top: -10px;
+    height: 4px;
+    border-radius: 0px;
+    background: black;
+  }
+/*change color onclick End*/
+
+/*Navbar End*/
+  
+
+
+
+/* menubtn Start */
+  .menubtn {
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border: 0;
+  }
+  .menubtn:focus {
+    outline: 0;
+  }
+   
+  .menubtn .line {
+    background-color: black;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: transform 0.6s linear;
+  }
+  
+  .menubtn .line2 {
+    top: auto;
+    bottom: 11px;
+  }
+  .menubtn .line3 {
+    top: auto;
+    bottom: 17px;
+    opacity: 1;    
+  }
+
+  nav.active .menubtn .line1 {
+    transform: rotate(-765deg) translateY(5.5px);
+  }
+  
+  nav.active .menubtn .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
+  } 
+  nav.active .menubtn .line3 {
+    transform: rotate(765deg) ;
+  } 
+
+nav.active .menubtn .line3 {
+ opacity: 0;
+}
+
+/* menubtn End */
