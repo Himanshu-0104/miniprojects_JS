@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --color-1:rgba(255, 255, 255, 0.1);
+    --color-2:rgba(255, 255, 255, 0.5);
+    --color-3:rgba(255, 255, 255, 0.75);
+    --color-4:rgba(0, 0, 0, 0.05);
+    --color-5: #466448;
+    --color-6: #fff;
+    --color-7: #040a29;
+    --color-8: rgba(255,255,255,0.075);
+    --x: 45deg;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  min-height: 100vh;
+  height: 400vh;
+  overflow-x: hidden;
+  /* background: black center center/cover; */
+  background: linear-gradient(to bottom, #000, #2f2f2f,#2f2f2f );
+} 
+.faqcontanier{
+    margin-right: 100px;
+}
+
+/*feedbacks inside contanier, has box , has card ,has elements, has imgbg or has name or has content */
+.contanier{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* position: relative; */
+}
+
+.box {
+  position: relative;
+  border-radius: 20px;
+  transform-style: preserve-3d; /*IMP*/
+}
+
+.box .card {
+  position: relative;
+  background: var(--color-1);
+  width: 300px;
+  min-height: 400px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-2);
+  border-top: 1px solid var(--color-3);
+  border-left: 1px solid var(--color-3);
+  border-radius: 20px;
+  box-shadow: 0 25px 45px var(--color-4);
+  transform-style: preserve-3d;
+}
+
+.elements {
+  position:absolute;
+  top: 50px;
+  left: -30px;
+  width: 100px;
+  height: 100px;
+  background: var(--color-1);
+  transform: translateZ(80px);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-2);
+  border-top: 1px solid var(--color-3);
+  border-left: 1px solid var(--color-3);
+  border-radius: 10px;
+  box-shadow: 0 25px 45px var(--color-4);
+}
+
+/* quotion Start*/
+.elequotionbg{
+  position:absolute;
+  width: 100px;
+  height: 100px;
+  transform: translateZ(80px);    
+}
+.elequotion{
+    position: absolute;
+    left: 66%;
+    top: 0%;
+}
+.fa-quote-left {
+    position: absolute;
+    color: var(--color-5); 
+    top: 15px;
+    left: 5px;
+    font-size: 80px; 
+}
+  /*if use image as quotient then put here url only*/
+/* .elequotion::before { 
+  content:'';
+  position: absolute;
+  inset: 0;
+  background: url();
+  background-size: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.9s;
+} */
+.box:hover .elequotion{
+  transition: 0.3s;
+  left: 70%;
+  top: -2%;
+}
+.box:hover .fa-quote-left {
+  position: absolute;
+  top: -3px;
+  left: 5px;
+  font-size: 100px; 
+  color: black; 
+}
+/* quotion End*/
+
+
+/* eleimgbg + eleimage Start*/
+.eleimgbg {
+  position: absolute;
+  top: -10px;
+  left: -30px;
+  width: 120px;
+  height: 120px;
+  padding: 2px;
+  transform: translate(100px,50px);
+  opacity: 0;
+}
+
+.eleimgbg img {
+  position: absolute;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border-radius: 8px;
+  border: 1px solid var(--color-2);
+  border-top: 1px solid var(--color-3);
+  border-left: 1px solid var(--color-3);
+  box-shadow: 0 25px 45px var(--color-4);
+  transition: 0.3s;
+}
+
+/* .box:hover .eleimgbg img {
+  opacity: 1;
+} */
+.box:hover .eleimgbg {
+    opacity: 1;
+    transform: translate(0);
+    transform: translateZ(120px);
+    transition: 0.8s;  
+  }
+/* eleimgbg + eleimage End*/
+
+/* elename + elecontent Start*/
+.elename {
+  top: 66px;
+  /* left: initial; */
+  left: -82px;
+  right: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+  transform: translateZ(100px);
+  background: transparent;
+  backdrop-filter: blur(0px);
+  border: none;
+  box-shadow: none;
+  color: var(--color-5);
+  transition: 1s;
+  transition-delay: 0.25;
+}
+
+.box:hover .elename {
+  top: 135px;
+  opacity: 0;
+  
+}
+
+.elecontent {
+  position: absolute;
+  left: 20px;
+  width: 80%;
+  min-height: 25%;
+  max-height: 50%;
+  top: 35%; /*IMP*/
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elecontent p {
+  position: relative;
+  /* top: 10px; */
+  color: var(--color-5);
+  font-size: 1em; 
+  word-spacing: 5px;
+}
+
+.box:hover .elecontent p {
+  position: absolute;
+  color: black;
+  top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px 0px 15px;
+}
+
+.contenthover{
+  position:absolute;
+  top: 50px;
+  left: -30px;
+  width: 100px;
+  height: 100px;
+  background: var(--color-1);
+  transform: translateZ(80px);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-2);
+  border-top: 1px solid var(--color-3);
+  border-left: 1px solid var(--color-3);
+  border-radius: 10px;
+  box-shadow: 0 25px 45px var(--color-4);
+}
+.box:hover .elecontent{
+/* .elecontent{ */
+  left: 0;
+  right: -20px;
+  top: 40%;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 250px;
+  transform: translateZ(180px);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.9;
+  transition: 0.3s;
+  overflow: auto;
+}
+
+/* elename + elecontent End*/
