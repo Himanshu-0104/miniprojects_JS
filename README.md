@@ -7,5 +7,5 @@ d6_Layout_Splitter             : [Clickme](https://himanshu-0104.github.io/pusbl
 d7_Search_Button_Transition    : [Clickme](https://himanshu-0104.github.io/pusblish_JS_projects/) <br/>
 d8_Helpful_FAQs                : [Clickme](https://himanshu-0104.github.io/pusblish_JS_projects/) <br/>
 d9_ImageFrame_Vanilla_Animations : [Clickme](https://himanshu-0104.github.io/pusblish_JS_projects/) <br/>
-d10_FAQtestimonialsCard_3DGlassmorphism : [Clickme](https://himanshu-0104.github.io/pusblish_JS_projects/) <br/>
+d10_Feedback_TestimonialsCard_3DGlassmorphism : [Clickme](https://himanshu-0104.github.io/pusblish_JS_projects/) <br/>
 
