@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  padding: 80px;
+  justify-content: center; /*main axis : depand on flesdirection*/
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(12, 30, 44);
+}
+
+* {
+  box-sizing: border-box; /*manages width or height*/
+}
+
+.container {
+  display: flex;
+  width: 95vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30vh;
+  border-radius: 60px;
+  cursor: pointer;
+  flex: 0.2;
+  margin: 10px;
+  position: relative;
+  transition: all 400ms ease-in-out;
+}
+
+.panel h3 {
+  font-size: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 45%;
+  margin: 0;
+  opacity: 0;
+  margin: auto;
+  padding: 2px 10px 2px 10px;
+  border-radius: 10px;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  text-decoration: solid;
+  color: black;
+  background-color: white;
+  transition: opacity 0.1s ease-in 0.4s;
+}
+
+@media (max-width: 548px) {
+  /* .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(2),
+  .panel:nth-of-type(4) {
+    display: none;
+  } */
+  body {
+    padding: 20px; /* Reduce padding for small screens */
+  }
+
+  .container {
+    flex-direction: column; /* Change flex direction to vertical */
+    align-items: center; /* Center items vertically */
+  }
+
+  .panel {
+    width: 100%; /* Make panels full width on small screens */
+    margin: 10px 0; /* Add spacing between panels */
+  }
+
+  .panel.active h3 {
+    left: 50%; /* Center text horizontally */
+    transform: translateX(-50%); /* Center text horizontally */
+  }
+}
