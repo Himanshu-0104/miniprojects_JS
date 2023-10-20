@@ -9,3 +9,5 @@ d8_Helpful_FAQs                : [Clickme](https://himanshu-0104.github.io/pusbl
 d9_ImageFrame_Vanilla_Animations : [Clickme](https://himanshu-0104.github.io/pusblish_JS_projects/) <br/>
 d10_Feedback_TestimonialsCard_3DGlassmorphism : [Clickme](https://himanshu-0104.github.io/pusblish_JS_projects/) <br/>
 d11_MenuButton_Animation       : [Clickme](https://himanshu-0104.github.io/pusblish_JS_projects/) <br/>
+d12_Dynamic_Counting_Effect    : [Clickme](https://himanshu-0104.github.io/pusblish_JS_projects/) <br/>
+d13_
