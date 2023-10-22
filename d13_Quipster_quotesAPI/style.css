@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 150vh;
+  overflow-x: hidden;
+  background-color: #353441;
+}
+
+
+
+
+
+.container {
+  background-color: #434755;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 100%;
+  width: 800px;
+  /* color: #c8c9cf; */
+  position: relative;
+  top: 100px;
+}
+
+/* .container h2{ */
+.h2color{
+  margin: 0;
+  opacity: 0.5;
+  letter-spacing: 2px;
+  color: #c8c9cf;
+  font-size: 45px;
+  
+}
+
+/* .contanier p { */
+.pcolor{
+  margin: 0;
+  opacity: 0.5;
+  letter-spacing: 2px;
+  /* color: green; */       /*why thi not work*/
+  color: #c8c9cf;
+  margin-top: 5px;
+}
+.category{
+  position: absolute;
+  top: 145px;
+  left: 120px;
+  width: 130px;
+  background: transparent;
+  color: #caccd1 ;
+  border: none;
+  outline: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  appearance: none;
+}
+
+.quote {
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  max-width: 600px;
+  margin: 50px auto;
+  color:#caccd1 ;
+
+}
+
+.quoteauthor{
+  position: absolute;
+  right: 100px;
+  bottom: 110px;
+  color:#e7e9ee ;
+  /* font-style: bold;  */      /*why not works*/
+
+}
+
+.quotebtn {
+  background-color: #19c27d;
+  color: #ffffff;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 14px 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.quotebtn[disabled]{
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.quotebtn:active {
+  transform: scale(0.98);
+}
+
+.quotebtn:focus {
+  outline: 0;
+}
