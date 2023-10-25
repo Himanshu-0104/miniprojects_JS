@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 150vh;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+}
+
+.container{
+  position: relative;
+}
+
+
+/* Searchbox Start */
+.searchbox{
+  position: relative;
+  top: 150px;
+  border: none;
+  border-radius:30px;
+  width: 550px;
+  height: 40px;
+  background-color: #7700ff;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-family: monospace;
+  color: white;
+  margin: 0 0 2rem 1.5rem;
+}
+.searchbox::placeholder{
+ color: white;
+ word-spacing: 2px;
+ font-family: monospace;
+ opacity: 0.5;
+}
+input[type="text"]:not(:placeholder-shown) {
+  border-color: #4CAF50; 
+}
+
+.searchbox:focus{
+  outline: none;
+  border: 2px darkgray solid;
+}
+/* Searchbox END */
+
+
+
+/* Profile Start */
+.profile{
+  position: relative;
+  top: 180px;
+}
+
+.profilecard {
+  max-width: 600px;
+  background-color: #6610c8;
+  border-radius: 20px;
+  display: flex;
+
+  padding: 3rem;
+}
+
+.profileimg {
+  border-radius: 50%;
+  border: 5px solid #290355;
+  height: 150px;
+  width: 150px;
+}
+
+.userinfo {
+  color: rgb(238, 238, 238);
+  margin-left: 2rem;
+}
+
+.userinfo h2 {
+  margin-top: 0;
+}
+.userinfo ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 400px;
+}
+.userinfo ul li {
+  display: flex;
+  align-items: center;
+  margin-right: 1.2rem;
+}
+.userinfo ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.repos {
+  text-decoration: none;
+  color: white;
+  background-color: #801542;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+/* Profile End */
+
+
+
+@media (max-width: 500px) {
+  .profilecard {
+    max-width: 350px;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px 10px 10px;
+  }
+  .userinfo{
+    margin-top: 20px;
+  }
+
+  .searchbox {
+    max-width: 300px;
+  }
+}
